@@ -1,0 +1,8 @@
+-r base.txt
+
+iPython==6.5.0
+pre-commit==1.11.0
+pytest==3.8.0
+pytest-django==3.4.2
+django-extensions==2.1.2
+werkzeug==0.14.1
