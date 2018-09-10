@@ -1,0 +1,15 @@
+repos:
+-   repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      args: [--line-length=79, --safe]
+      python_version: python3.6
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v1.2.3
+    hooks:
+    - id: requirements-txt-fixer
+      language_version: python
+      args:
+        - requirements/base.txt
+        - requirements/dev.txt
