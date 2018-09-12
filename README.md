@@ -1,5 +1,8 @@
 # DevOps On Demand
 
+[![CircleCI](https://circleci.com/gh/mislavcimpersak/devops-on-demand/tree/master.svg?style=svg)](https://circleci.com/gh/mislavcimpersak/devops-on-demand/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/mislavcimpersak/devops-on-demand/badge.svg?branch=master)](https://coveralls.io/github/mislavcimpersak/devops-on-demand?branch=master)
+
 A Django exercise.
 
 Calculates optimal number of DevOps Managers and DevOps Engineers required to cover multiple data centers.
