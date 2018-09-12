@@ -11,6 +11,7 @@ Calculates optimal number of DevOps Managers and DevOps Engineers required to co
 1. Make a new Python 3.6 virtual environment
 2. Install dependencies: `pip install -r requirements/dev.txt`
 3. Run app: `python manage.py runserver`
+4. API endpoint is available at `http://127.0.0.1:8000`
 
 ### Framework and Tools Used
 
