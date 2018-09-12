@@ -59,6 +59,6 @@ Run the project locally and fire up curl from the shell:
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"DM_capacity": "20", "DE_capacity": "8", "data_centers": [{"name": "Paris", "servers": "20"}, {"name": "Stockholm", "servers": "62"}]}' \
-  http://localhost:8000/
+  http://127.0.0.1:8000/
 
 ```
