@@ -30,16 +30,20 @@ Code formating is done with [Black](https://github.com/ambv/black) and an additi
 
 ### Django Configuration
 
+Again, using [Django-Configurations](https://github.com/jazzband/django-configurations) is a total overkill for this project, but is a smart thing to use in a project from the beginning if it ever grows (ok, this one won't 😇 ).
+
 To ease first time run, by default development config (`devops_on_demand.settings.DevConfig`) will be used.
 
 ### `.env` file
+
+Another overkill: [Django-environ](https://github.com/joke2k/django-environ/), but a smart practice.
 
 All required environment variables for the project are available in `.env` file.
 `.env` file is included in this repo, but in a real life scenario this file should not be commited to VCS. It is commited in this repo to get the person who is running the code in front of a working project as soon as possible.
 
 ### Tests
 
-Whole code is covered with tests and the acceptance tests are in `maintenance/tests/test_exercise_acceptance.py`.
+Whole code is covered with tests and additional acceptance tests are in `maintenance/tests/test_exercise_acceptance.py`.
 
 #### pytest
 
