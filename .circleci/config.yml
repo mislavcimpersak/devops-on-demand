@@ -33,7 +33,6 @@ jobs:
           command: |
             . ~/venv/bin/activate
             pip install -r requirements/test.txt
-            echo 'export DJANGO_CONFIGURATION=TestConfig' >> $BASH_ENV
             pytest
             # COVERALLS_REPO_TOKEN env var set in CircleCI web UI
             coveralls

@@ -71,14 +71,6 @@ class DevConfig(BaseConfig):
 
     DEBUG = True
 
-    INSTALLED_APPS = BaseConfig.INSTALLED_APPS + ["django_extensions"]
-
-
-class TestConfig(BaseConfig):
-    """Django Configuration class with specific settings when running the test suite."""
-
-    pass
-
 
 class ProdConfig(BaseConfig):
     """Django Configuration class with specific for the production environment."""
