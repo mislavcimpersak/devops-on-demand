@@ -2,6 +2,8 @@
 
 A Django exercise.
 
+Calculates optimal number of DevOps Managers and DevOps Engineers required to cover multiple data centers.
+
 ## Notes
 
 ### Running the Project Locally
@@ -9,6 +11,11 @@ A Django exercise.
 1. Make a new Python 3.6 virtual environment
 2. Install dependencies: `pip install -r requirements/dev.txt`
 3. Run app: `python manage.py runserver`
+
+### Framework and Tools Used
+
+Django and Django Rest Framework are a total _overkill_ for this kind of exercise. Oh, well :)
+In real life situation Falcon/Hug/API Star would be a better fit for this case.
 
 ### Pre-commit Hooks
 
@@ -18,6 +25,8 @@ Project uses [pre-commit](https://github.com/pre-commit/pre-commit) hooks. To us
 pre-commit install
 ```
 
+Code formating is done with [Black](https://github.com/ambv/black) and an additional [requirement files check](https://github.com/pre-commit/pre-commit-hooks) is run.
+
 ### Django Configuration
 
 To ease first time run, by default development config (`devops_on_demand.settings.DevConfig`) will be used.
@@ -26,3 +35,29 @@ To ease first time run, by default development config (`devops_on_demand.setting
 
 All required environment variables for the project are available in `.env` file.
 `.env` file is included in this repo, but in a real life scenario this file should not be commited to VCS. It is commited in this repo to get the person who is running the code in front of a working project as soon as possible.
+
+### Tests
+
+Whole code is covered with tests and the acceptance tests are in `maintenance/tests/test_exercise_acceptance.py`.
+
+#### pytest
+
+[pytest](https://docs.pytest.org/en/latest/) is used for running the test suite. Position yourself in the root of the project and just run:
+
+```
+pytest
+```
+
+[Coverage](https://coverage.readthedocs.io/en/coverage-4.5.1a/) report is available on run.
+
+#### Test using curl
+
+Run the project locally and fire up curl from the shell:
+
+```
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"DM_capacity": "20", "DE_capacity": "8", "data_centers": [{"name": "Paris", "servers": "20"}, {"name": "Stockholm", "servers": "62"}]}' \
+  http://localhost:8000/
+
+```
