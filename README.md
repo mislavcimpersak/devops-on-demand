@@ -6,6 +6,7 @@
 A Django exercise.
 
 Calculates optimal number of DevOps Managers and DevOps Engineers required to cover multiple data centers.
+Servers are maintained by the DevOps Manager and possibly other DevOps Engineers called in on-demand. There is only one Manager, but there can be many Engineers.
 
 ## Notes
 
