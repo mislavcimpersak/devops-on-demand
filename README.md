@@ -47,7 +47,7 @@ All required environment variables for the project are available in `.env` file.
 
 ### Tests
 
-Whole code is covered with tests and additional acceptance tests are in `maintenance/tests/test_exercise_acceptance.py`.
+Whole code is covered with tests and additional acceptance tests are in [`maintenance/tests/test_exercise_acceptance.py`](maintenance/tests/test_exercise_acceptance.py).
 
 #### pytest
 
